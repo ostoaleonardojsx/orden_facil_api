@@ -1,4 +1,4 @@
-const connection = require('./db');
+const connection = require('../db');
 
 function getAllArticles(req, res) {
     connection.query('SELECT * FROM articulos', (err, rows) => {

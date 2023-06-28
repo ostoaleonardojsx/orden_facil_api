@@ -2,12 +2,12 @@ const express = require('express');
 
 const router = express.Router();
 
-const service = require('./service');
+const serviceArticulos = require('./services/articulosService');
 
-router.get('/', service.getAllArticles);
-router.get('/:id', service.getArticleById);
-router.post('/', service.createArticle);
-router.delete('/:id', service.deleteArticle);
-router.put('/:id', service.updateArticle);
+router.get('/', serviceArticulos.getAllArticles);
+router.get('/:id', serviceArticulos.getArticleById);
+router.post('/', serviceArticulos.createArticle);
+router.delete('/:id', serviceArticulos.deleteArticle);
+router.put('/:id', serviceArticulos.updateArticle);
 
 module.exports = router;
